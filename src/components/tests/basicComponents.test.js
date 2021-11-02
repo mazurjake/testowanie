@@ -3,7 +3,7 @@ Enzyme.configure({ adapter: new Adapter() });
 import 'regenerator-runtime/runtime';
 import Enzyme,{shallow,  mount} from "enzyme";
 import React from 'react'
-import { BasicFunctionalComponent, PropsRenderingTest, AsyncDataComponent, TriggerEffect} from "../firstTest";
+import { BasicFunctionalComponent, PropsRenderingTest, AsyncDataComponent, TriggerEffect} from "../basicComponents";
 import * as module from '../../functions'
 
 
