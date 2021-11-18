@@ -2,7 +2,7 @@
 
 npm i / yarn <br />
 npm install -g jest <br />
-npm install --save-dev --save-exact jsdom jsdom-global <br />
+npm install --save-dev --save-exact jsdom jsdom-global (gdyby dalej nie dzialalo) <br />
 
 #Komendy
 
