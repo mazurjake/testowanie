@@ -1,3 +1,9 @@
+#instalacja
+
+npm i / yarn
+npm install -g jest
+npm install --save-dev --save-exact jsdom jsdom-global
+
 #Komendy
 
 npm test -- --coverage -> tworzy nam coverage w lokacji projekt/coverage/icov-report
