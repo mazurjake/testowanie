@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`For AsyncDataComponent Should render correct snapshot 1`] = `"<div><div> replaced the data</div></div>"`;
+exports[`For AsyncDataComponent Should render correct snapshot 1`] = `"<div><div> replaced the data </div></div>"`;
 
-exports[`For BasicFunctionalComponent Should render correct snapshot 1`] = `"<div>hey dude</div>"`;
+exports[`For BasicFunctionalComponent Should render correct snapshot 1`] = `"<div>QARBON RULES</div>"`;
 
 exports[`For PropsRenderingTest Should render correct snapshot (1) 1`] = `"<div></div>"`;
 

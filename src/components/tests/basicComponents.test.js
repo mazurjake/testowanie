@@ -1,9 +1,10 @@
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 Enzyme.configure({ adapter: new Adapter() });
+import 'jsdom-global/register'
 import 'regenerator-runtime/runtime';
 import Enzyme,{shallow,  mount} from "enzyme";
 import React from 'react'
-import { BasicFunctionalComponent, PropsRenderingTest, AsyncDataComponent, TriggerEffect} from "../basicComponents";
+import { BasicFunctionalComponent, PropsRenderingTest, getMajonez, AsyncDataComponent, TriggerEffect} from "../basicComponents";
 import * as module from '../../functions'
 
 
@@ -32,6 +33,7 @@ describe('For AsyncDataComponent', ()=>{
         const default_props ={func: jest.fn()}
         jest.spyOn(module, 'getAsyncData').mockReturnValue(['replaced the data'])
         const wrapper = mount(<AsyncDataComponent {...default_props}/>)
+        wrapper.setProps({some:'setProps will affect props'})
         expect(wrapper.html()).toMatchSnapshot()
     })
     test('Should call props.func',()=>{
@@ -65,7 +67,16 @@ describe('For TriggerEffect', ()=>{
     })
 });
 
+const majonezMock= jest.fn()
+const majonezMock2 = jest.fn().mockReturnValue('super majonez')
 
-// "setupFilesAfterEnv": [
-//     "<rootDir>/src/setupTests.js"
-// ],
+describe('For getMajonez', ()=>{
+    test('Should call callback', ()=>{
+        getMajonez(majonezMock)
+        expect(majonezMock).toHaveBeenCalled()
+    })
+    test('Should return "super majonez"', ()=>{
+        const returned_value = getMajonez(majonezMock2)
+        expect(returned_value).toBe('super majonez')
+    })
+})
